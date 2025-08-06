@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | TastyBites</title>
+  <style>
+    /* =============================
+   ABOUT PAGE STYLING
+   ============================= */
+.about {
+  padding: 80px 20px;
+  background-color: #fefefe;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  animation: fadeInLeft 1.2s ease-in-out;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeInRight 1.2s ease-in-out;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header {
+      background-color: #000;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6347;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    /* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =============================
+   Animations
+   ============================= */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =============================
+   Responsive Design
+   ============================= */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-image img {
+    max-height: 300px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TastyBites</div>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h1 class="section-title">About TastyBites</h1>
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+          TastyBites began with a simple idea: bring fresh, flavorful food to everyone in a welcoming environment. 
+          Since opening our doors in 2022, we've delighted customers with our creative dishes, warm service, and modern atmosphere.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+          To serve high-quality meals made with love and fresh ingredients, while making every guest feel at home.
+        </p>
+
+        <h2>Our Vision</h2>
+        <p>
+          To become the most loved restaurant in the city, known for innovation, great taste, and community spirit.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="./channels4_profile.jpg" alt="Our Chef" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+  </script>
+</body>
+</html>

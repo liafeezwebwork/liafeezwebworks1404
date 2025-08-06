@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Liafeez WebWorks</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #222;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card .content {
+      padding: 1rem;
+    }
+
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #00bcd4;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Liafeez WebWorks</div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>My Projects</h1>
+    <p style="text-align:center; max-width:700px; margin: auto;">
+      Below are some of the professional websites I've designed and built. Each project showcases my ability to bring ideas to life with modern design, smooth interactions, and responsive layouts.
+    </p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="Logo.png" alt="Granite Website Project">
+        <div class="content">
+          <h3>Granite Aggregate Website</h3>
+          <p>A multi-page business website for a Nigerian granite supplier. Includes Home, About, Projects, Products, and Contact pages.</p>
+          <a href="./dayyus globbal resources/index.html" >View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 (Placeholder) -->
+      <div class="project-card">
+        <img src="./Add a heading (1).png" alt="Restaurant Website">
+        <div class="content">
+          <h3>Restaurant Website</h3>
+          <p>A multi-page restaurant site with a stylish menu, reservation form, and customer testimonials.</p>
+          <a href="./TastyBites/index.html">Preview</a>
+        </div>
+      </div>
+
+      <!-- Project 3 (Placeholder) -->
+      <div class="project-card">
+        <img src="./Add a heading (2).png" alt="Coming Soon">
+        <div class="content">
+          <h3>TechScoop Blog</h3>
+          <p>A tech blog featuring categorized articles, dynamic navigation, and a custom-styled</p>
+          <a href="./TechScoop/index.html">Preview</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./Add a heading (3).png" alt="Coming Soon">
+        <div class="content">
+          <h3>Eye Clinic Landing Page</h3>
+          <p>A clean, professional landing page for an eye clinic. It includes animated hero sections, service highlights, patient testimonials, and contact prompts. Designed with trust-building elements and mobile responsiveness in mind.</p>
+          <a href="./eyeclinic/index.html">Preview</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./Add a heading (4).png" alt="Coming Soon">
+        <div class="content">
+          <h3>Photography Portfolio Landing Page</h3>
+          <p>A visually rich and animated landing page built for a photography brand. It includes a showcase gallery, client quotes, service description, and an elegant call-to-action section — all wrapped in a smooth, modern layout perfect for creative professionals.
+
+</p>
+          <a href="./photography.html">Preview</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./l (1).png" alt="Coming Soon">
+        <div class="content">
+          <h3>Online Course Landing Page</h3>
+          <p>This landing page was designed for an online coding course. It features bold typography, a structured layout, call-to-action buttons, and smooth animations to engage visitors and encourage sign-ups. Fully responsive and optimized for performance.</p>
+          <a href="./master-frontend-course/index.html">Preview</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Liafeez WebWorks. All rights reserved.</p>
+      <p>
+        <a href="https://wa.me/2349048915943" target="_blank">WhatsApp</a> |
+        <a href="mailto:liafeezabdulazeez@gmail.com">Email</a> |
+        <a href="https://www.facebook.com/profile.php?id=100068765363733">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | TastyBites</title>
+  <style>
+    header {
+      background-color: #000;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6347;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    /* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+    .gallery {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  color: #c0392b;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+      .hamburger {
+    display: block;
+  }
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TastyBites</div>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <h2>Our Delicious Dishes</h2>
+    <div class="gallery-grid">
+  <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Delicious Meal 1" />
+  <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious Meal 2" />
+  <img src="https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg" alt="Grilled Chicken" width="100%">
+  <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Pasta" width="100%">
+  <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Salad" width="100%">
+  <img src="https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg" alt="Seafood" width="100%">
+</div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

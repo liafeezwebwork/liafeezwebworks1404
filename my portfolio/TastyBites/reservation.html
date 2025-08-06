@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservation & Testimonials | TastyBites</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf9;
+  color: #333;
+  line-height: 1.6;
+}
+.logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6347;}
+/* Header */
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Reservation Section */
+.reservation {
+  background-color: #f1faee;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.reservation h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #e63946;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #16324f;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #fffdf9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #e63946;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.testimonial {
+  background-color: #f1faee;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  color: #1d3557;
+}
+
+/* Footer */
+footer {
+  background-color: #e63946;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .testimonial-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <header>
+    <div class="logo">TastyBites</div>
+    
+      
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Reservation Section -->
+    <section class="reservation">
+      <h2>Make a Reservation</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" placeholder="No. of Guests" required min="1" />
+        <textarea placeholder="Special Requests..."></textarea>
+        <button type="submit">Reserve Now</button>
+      </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>"The jollof rice was amazing and perfectly spiced!"</p>
+          <h4>- Sarah M.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Quick delivery and excellent customer service. Highly recommended!"</p>
+          <h4>- James O.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"The pepper soup is my all-time favorite. Always hot and fresh!"</p>
+          <h4>- Aisha T.</h4>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
